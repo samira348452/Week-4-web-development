@@ -1,80 +1,73 @@
-# SpendWise - Smart Budget Tracker
+# SpendWise Dashboard
 
-## Project Description
+SpendWise is a personal budgeting dashboard designed to help users understand their monthly budget and spending. The JavaScript version allows users to enter their budget and expenses and calculates the remaining balance.
 
-SpendWise is an interactive budgeting application that helps users manage their monthly budgets, record expenses and monitor their spending.
+## JavaScript Concepts Implemented
 
-Users can set a monthly budget, add expenses, view total spending, check their remaining balance and receive warnings when they approach or exceed their budget.
+This project demonstrates:
 
-## Technologies Used
+* Variables
+* Data types
+* User input
+* Number conversion
+* Calculations
+* Functions
+* Return values
+* Console output
 
-- HTML5
-- CSS3
-- JavaScript
-- GitHub
-- Netlify
+## How Variables Are Used
 
-## GitHub Repository Information
+Variables store important budgeting information.
 
-**GitHub Username:** abdifatax1234567
+For example:
 
-**Repository Name:** SpendWise
 
-**Repository URL:**
+let monthlyBudget = 50000;
+let totalExpenses = 0;
+```
 
-https://github.com/abdifatax1234567/Final-project-assignment-week-7-web-development
+The `monthlyBudget` variable stores the budget amount, while `totalExpenses` stores the total amount spent.
 
-## Live Netlify Website URL
+## How User Input Is Collected
 
-**Visit the live SpendWise application:**
+The project uses the JavaScript `prompt()` function to collect information from the user.
 
-https://spendwise-abdifatahproject.netlify.app
+```javascript
+let budgetInput = prompt("Enter your monthly budget:");
+let expenseInput = prompt("Enter your total expenses:");
 
-## Deployment Process Summary
 
-The SpendWise application was deployed using GitHub and Netlify.
+The user's input is then converted into numbers using `Number()`.
 
-The deployment steps included:
+## How Calculations Are Performed
 
-1. Organizing the project files.
-2. Creating a public GitHub repository.
-3. Uploading the HTML, CSS, JavaScript and README files.
-4. Connecting the GitHub repository to Netlify.
-5. Configuring the deployment settings.
-6. Publishing the website.
-7. Changing the default Netlify site name.
-8. Testing the live application.
+SpendWise calculates the remaining balance by subtracting total expenses from the monthly budget.
 
-## Continuous Deployment Test
+javascript
+budget - expenses
 
-Netlify is connected to the SpendWise GitHub repository to support automatic deployments.
 
-When changes are committed and pushed to the connected GitHub branch, Netlify can automatically deploy the updated application.
+For example, if the budget is Ksh 50,000 and expenses are Ksh 20,000, the remaining balance is Ksh 30,000.
 
-## Challenges Encountered During Deployment
+## How Functions Organize the Code
 
-Some challenges encountered included:
+A reusable function is used to calculate the remaining balance:
 
-- Connecting GitHub to Netlify.
-- Configuring the correct publish directory.
-- Understanding automatic deployments.
-- Checking that CSS and JavaScript files loaded correctly.
+```javascript
+function calculateRemainingBalance(budget, expenses) {
+    return budget - expenses;
+}
+```
 
-These challenges were addressed by reviewing deployment settings and testing the website.
+The function receives the budget and expenses as parameters and returns the calculated remaining balance.
 
-## Lessons Learned
+## Project Files
 
-Through this assignment, I learned:
+* `index.html` - Contains the structure of the SpendWise dashboard.
+* `style.css` - Contains the styling and layout.
+* `script.js` - Contains the JavaScript logic and calculations.
+* `README.md` - Explains the project and JavaScript concepts.
 
-- How to create and manage public GitHub repositories.
-- How to deploy websites using Netlify.
-- How to connect GitHub with Netlify.
-- How to configure a custom Netlify site name.
-- How continuous deployment works.
-- How to test a live website.
+## How to Run
 
-## Conclusion
-
-SpendWise was developed using HTML, CSS and JavaScript and published using GitHub and Netlify.
-
-The project demonstrates the process of publishing a website online and maintaining it through automatic deployments.
+Open `index.html` in a web browser. The JavaScript program will ask for the monthly budget and total expenses using prompts. The results can be viewed in the browser console.
