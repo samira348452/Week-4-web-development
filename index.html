@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SpendWise helps you track expenses and manage your monthly budget.">
+    <title>SpendWise | Smart Budget Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<header>
+    <div class="header-content">
+        <div class="logo">SpendWise</div>
+        <p>Smart spending. Better savings.</p>
+    </div>
+</header>
+
+<main class="container">
+
+    <section class="welcome">
+        <div>
+            <h1>Welcome to SpendWise!</h1>
+            <p>Take control of your money and track your expenses.</p>
+        </div>
+    </section>
+
+    <section class="dashboard">
+        <h2>Financial Dashboard</h2>
+
+        <div class="cards">
+            <div class="card">
+                <span>Monthly Budget</span>
+                <h3 id="budget">KSh 50,000</h3>
+            </div>
+
+            <div class="card">
+                <span>Total Expenses</span>
+                <h3 id="totalExpenses">KSh 0</h3>
+            </div>
+
+            <div class="card">
+                <span>Remaining Balance</span>
+                <h3 id="balance">KSh 50,000</h3>
+            </div>
+        </div>
+
+        <div class="progress-section">
+            <div class="progress-label">
+                <span>Budget Usage</span>
+                <span id="percentage">0%</span>
+            </div>
+            <div class="progress-track">
+                <div id="progressBar"></div>
+            </div>
+        </div>
+
+        <p id="feedback" class="feedback">
+            Great! You are within your budget.
+        </p>
+    </section>
+
+    <section class="form-section">
+        <h2>Set Monthly Budget</h2>
+
+        <form id="budgetForm">
+            <input type="number" id="budgetInput"
+                min="0.01" step="0.01"
+                placeholder="Enter monthly budget" required>
+            <button type="submit">Update Budget</button>
+        </form>
+    </section>
+
+    <section class="form-section">
+        <h2>Add New Expense</h2>
+
+        <form id="expenseForm">
+            <input type="text" id="expenseName"
+                maxlength="60" placeholder="Expense description" required>
+
+            <select id="category" required>
+                <option value="">Choose Category</option>
+                <option value="Food">Food</option>
+                <option value="Transport">Transport</option>
+                <option value="Shopping">Shopping</option>
+                <option value="Bills">Bills</option>
+                <option value="Entertainment">Entertainment</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <input type="number" id="expenseAmount"
+                min="0.01" step="0.01"
+                placeholder="Amount in KSh" required>
+
+            <button type="submit">Add Expense</button>
+        </form>
+    </section>
+
+    <section class="expenses-section">
+        <h2>Recent Expenses</h2>
+        <div id="expenseList">
+            <p class="empty">No expenses recorded yet.</p>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 SpendWise. Smart spending starts here.</p>
+</footer>
+
+</body>
+</html>
+
+<!-- Automatic deployment test -->
